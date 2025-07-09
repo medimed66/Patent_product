@@ -1,0 +1,15 @@
+playwright
+playwright-stealth
+beautifulsoup4
+pandas
+requests
+transformers
+unsloth
+accelerate
+torch
+pdfplumber
+PyPDF2
+pycryptodome
+scikit-learn
+networkx
+git+https://github.com/bluorion-com/ZClip.git

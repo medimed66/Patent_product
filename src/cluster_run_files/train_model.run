@@ -1,0 +1,27 @@
+#!/bin/bash -l
+#SBATCH --job-name=Train_model
+#SBATCH --qos=normal
+#SBATCH --nodes=1
+#SBATCH --time=5:00:00
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:2
+#SBATCH --mem=350G
+#SBATCH --output=model-%j.out
+#SBATCH --mail-user=mehdi.elbouari@epfl.ch
+#SBATCH --mail-type=BEGIN,END,FAIL
+
+# -------------------------------
+# Load required system modules
+# -------------------------------
+module purge                   
+module load gcc python cuda    
+
+# -------------------------------
+# Activate your Python environment
+# -------------------------------
+source venvs/main_env/bin/activate
+
+# -------------------------------
+# Run your Python script
+# -------------------------------
+python train_model.py

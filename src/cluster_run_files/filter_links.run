@@ -1,0 +1,24 @@
+#!/bin/bash -l
+#SBATCH --job-name=filter_links
+#SBATCH --qos=normal
+#SBATCH --nodes=1
+#SBATCH --time=3:00:00
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:2
+#SBATCH --output=slurm-%j.out
+
+# -------------------------------
+# Load required system modules
+# -------------------------------
+module purge                   
+module load gcc python cuda    
+
+# -------------------------------
+# Activate your Python environment
+# -------------------------------
+source venvs/main_env/bin/activate
+
+# -------------------------------
+# Run your Python script
+# -------------------------------
+python filter_links.py
