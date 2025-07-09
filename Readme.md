@@ -45,7 +45,7 @@ The dataset is built using publicly available product–patent associations from
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/medimed66/Patent_product.git
    cd Patent_product
    ```
 
